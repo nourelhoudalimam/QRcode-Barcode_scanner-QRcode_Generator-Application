@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.gcu.qrcode_barcodescannerqrcodegenerator">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--Permission for camera-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--Permission to vibrate-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/qrcode"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/qrcode"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QRCode_BarcodeScannerQRCodeGenerator">
+        <activity
+            android:name=".ScanQRCodeAndBarCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GenerateQRCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
